@@ -43,8 +43,6 @@ We also put the package `supervoxels` in `./data`, run our modified file `./data
 ### Testing
 Run `./scripts/val.sh`
 
-### Acknowledgement
-This code is based on [SSL-ALPNet](https://arxiv.org/abs/2007.09886v2) (ECCV'20) by [Ouyang et al.](https://github.com/cheng-01037/Self-supervised-Fewshot-Medical-Image-Segmentation.git) and [ADNet](https://www.sciencedirect.com/science/article/pii/S1361841522000378) by [Hansen et al.](https://github.com/sha168/ADNet.git). 
 
 ### Citation
 ```
