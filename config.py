@@ -60,8 +60,8 @@ def cfg():
     print_interval = 100
     # save_snapshot_every = 1000 # 已经有更好的保存方式了，这被弃用
     max_iters_per_load = 1000  # epoch size, interval for reloading the dataset
-    alpha=0.9 # dual-scale
-    beta=1.0
+    alpha=1.0
+
     
     # Network
     reload_model_path = None
