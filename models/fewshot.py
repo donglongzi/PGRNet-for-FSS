@@ -289,7 +289,6 @@ class ResNet(nn.Module):
         final_mask = self.decoder(aspp_feature, query_feature1)
 
         if self.training:
-            aux_mask = self.layer_out2(aspp_feature)
             query_pred = nn.functional.softmax(final_mask, dim=1)
             query_pred = query_pred.argmax(dim=1, keepdim=True) # C x H x W
             query_pred = F.interpolate(query_pred.float(), query_feature_maps.shape[-2:], mode='bilinear', align_corners=True)
@@ -306,7 +305,7 @@ class ResNet(nn.Module):
             mse2 = mse_loss(query_conv_71.float(), sup_conv_71.float())
             mse = mse1 + mse2
 
-            return final_mask, aux_mask, mse
+            return final_mask, mse
         else:
             return final_mask
 
